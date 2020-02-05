@@ -1,0 +1,19 @@
+<p>login works!</p>
+<table >
+    <th>UserLogin</th>
+    <tr>
+        <td>
+            UserName<input type="text"[(ngModel)]="obj.username">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Password<input type="password"[(ngModel)]="obj.password">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="Validation(obj.username,obj.password)">Login</button>
+        </td>
+    </tr>
+</table>
