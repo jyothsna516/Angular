@@ -1,0 +1,50 @@
+<h1>Employee Details</h1>
+<table>
+    <tr>
+        <td>ProjectId</td>
+        <td><input type="text"[(ngModel)]="pid"></td>
+    </tr>
+    <tr>
+        <td>ProjectName</td>
+        <td><input type="text"[(ngModel)]="pname"></td>
+    </tr>
+    <tr>
+        <td>Domain</td>
+        <select [(ngModel)]="domain">
+            <option>Python</option>
+            <option>java</option>
+            <option>sql</option>
+        </select>
+    </tr>
+    <tr>
+        <td>STARTDATE</td>
+        <td><input type="date" [(ngModel)]="sdate"></td>
+    </tr> 
+    <tr>
+        <td>EndDATE</td>
+        <td><input type="date" [(ngModel)]="edate"></td>
+    </tr>
+    <tr colspan="2">
+        <button (click)="AddDetails()">Submit</button>
+        <button (click)="hideshow()">{{val?'hide':'show'}}</button>
+    </tr>
+</table>
+<hr>
+<table border="1">
+    <tr>
+        <th>PID</th>
+        <th>PNAME</th>
+        <th>Domain</th>
+        <th>SD</th>
+        <th>ED</th>
+    </tr>
+    <tr *ngFor="let item of list">
+       
+        <td *ngIf=
+        "val">{{item.pid}}</td>
+        <td *ngIf="val">{{item.pname}}</td>
+        <td *ngIf="val">{{item.domain}}</td>
+        <td *ngIf="val">{{item.sdate}}</td>
+        <td *ngIf="val">{{item.edate}}</td>
+    </tr>
+</table>
